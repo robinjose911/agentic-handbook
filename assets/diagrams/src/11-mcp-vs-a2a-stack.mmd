@@ -1,0 +1,39 @@
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#F1EFFA",
+    "primaryTextColor": "#2A2A2A",
+    "primaryBorderColor": "#714EC4",
+    "secondaryColor": "#E7F2FF",
+    "secondaryBorderColor": "#0E6995",
+    "tertiaryColor": "#FFF4E6",
+    "tertiaryBorderColor": "#E1AB2F",
+    "lineColor": "#5F5F5F",
+    "textColor": "#404040",
+    "mainBkg": "#F1EFFA",
+    "clusterBkg": "#F2F5F7",
+    "clusterBorder": "#E0E0E0",
+    "edgeLabelBackground": "#FCFCFC",
+    "fontFamily": "Inter, -apple-system, sans-serif",
+    "fontSize": "14px"
+  }
+}}%%
+flowchart TB
+  subgraph EXP["Expertise — what the agent knows how to do"]
+    skills["Skills<br/>(reusable procedures / playbooks)"]:::primary
+  end
+  subgraph CONN["Connectivity — MCP: agent to tools + data"]
+    mcp["MCP servers<br/>(tools, resources, prompts)"]:::secondary
+    res["Data sources / APIs"]:::external
+  end
+  subgraph COORD["Coordination — A2A: agent to agent"]
+    a2a["A2A<br/>(agent cards, task handoff)"]:::secondary
+    peer["Peer / remote agents"]:::external
+  end
+  skills --> mcp --> res
+  skills --> a2a --> peer
+
+  classDef primary fill:#F1EFFA,stroke:#714EC4,stroke-width:2px,color:#2A2A2A
+  classDef secondary fill:#E7F2FF,stroke:#0E6995,stroke-width:2px,color:#2A2A2A
+  classDef tertiary fill:#FFF4E6,stroke:#E1AB2F,stroke-width:2px,color:#2A2A2A
+  classDef external fill:#F0F0F0,stroke:#808080,stroke-width:1.5px,color:#404040,stroke-dasharray: 4 2

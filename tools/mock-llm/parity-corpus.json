@@ -1,0 +1,29 @@
+[
+  { "system": "You are a helpful assistant.", "messages": [{ "role": "user", "content": "Hi" }], "tools": [] },
+  { "system": "", "messages": [{ "role": "user", "content": "unicode: café 日本語 — naïve façade" }], "tools": [] },
+  {
+    "system": "Route the ticket.",
+    "messages": [
+      { "role": "system", "content": "rules" },
+      { "role": "user", "content": "My card was declined." }
+    ],
+    "tools": [
+      {
+        "name": "lookup_order",
+        "description": "Look up an order by id.",
+        "schema": {
+          "type": "object",
+          "properties": { "id": { "type": "integer", "minimum": 0, "maximum": 1000000 } },
+          "temperature": 0.7,
+          "top_p": 1.0,
+          "stream": false,
+          "retries": 3,
+          "tags": ["billing", "urgent"],
+          "fallback": null
+        }
+      }
+    ]
+  },
+  { "messages": [], "tools": [], "system": "only system" },
+  { "system": "key order test", "messages": [{ "content": "b", "role": "user", "extra": { "z": 1, "a": 2 } }], "tools": [] }
+]

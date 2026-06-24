@@ -1,0 +1,34 @@
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#F1EFFA",
+    "primaryTextColor": "#2A2A2A",
+    "primaryBorderColor": "#714EC4",
+    "secondaryColor": "#E7F2FF",
+    "secondaryBorderColor": "#0E6995",
+    "tertiaryColor": "#FFF4E6",
+    "tertiaryBorderColor": "#E1AB2F",
+    "lineColor": "#5F5F5F",
+    "textColor": "#404040",
+    "mainBkg": "#F1EFFA",
+    "clusterBkg": "#F2F5F7",
+    "clusterBorder": "#E0E0E0",
+    "edgeLabelBackground": "#FCFCFC",
+    "fontFamily": "Inter, -apple-system, sans-serif",
+    "fontSize": "14px"
+  }
+}}%%
+flowchart TB
+  sup["Supervisor / orchestrator<br/>owns the goal + budget"]:::primary
+  sup -->|"sub-task A + brief"| w1["Worker A<br/>(own context)"]:::secondary
+  sup -->|"sub-task B + brief"| w2["Worker B<br/>(own context)"]:::secondary
+  sup -->|"sub-task C + brief"| w3["Worker C<br/>(own context)"]:::secondary
+  w1 -->|"artifact"| agg["Supervisor aggregates<br/>+ checks consistency"]:::primary
+  w2 -->|"artifact"| agg
+  w3 -->|"artifact"| agg
+  agg --> out(["Synthesised result"])
+
+  classDef primary fill:#F1EFFA,stroke:#714EC4,stroke-width:2px,color:#2A2A2A
+  classDef secondary fill:#E7F2FF,stroke:#0E6995,stroke-width:2px,color:#2A2A2A
+  classDef tertiary fill:#FFF4E6,stroke:#E1AB2F,stroke-width:2px,color:#2A2A2A
+  classDef external fill:#F0F0F0,stroke:#808080,stroke-width:1.5px,color:#404040,stroke-dasharray: 4 2

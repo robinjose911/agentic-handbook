@@ -1,0 +1,1 @@
+{"request":{"messages":[{"content":"My card was declined at checkout.","role":"user"}],"system":"You are a support triage assistant. Reply with one label.","tools":[]},"response":{"content":"billing","stop_reason":"end_turn","usage":{"input_tokens":18,"output_tokens":1}}}

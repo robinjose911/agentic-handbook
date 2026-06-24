@@ -1,0 +1,9 @@
+{"escalated": false, "high_risk": false, "intent": "booking", "message_id": "m1", "reason_code": "NEW_APPOINTMENT", "recognized": true, "route": "queue:booking"}
+{"escalated": false, "high_risk": false, "intent": "reschedule", "message_id": "m2", "reason_code": "RESCHEDULE_REQUEST", "recognized": true, "route": "queue:reschedule"}
+{"escalated": true, "high_risk": true, "intent": "medication", "message_id": "m3", "reason_code": "MED_DOSAGE_CHANGE", "recognized": true, "route": "human-review"}
+{"escalated": true, "high_risk": true, "intent": "emergency", "message_id": "m4", "reason_code": "EMERGENCY_SYMPTOMS", "recognized": true, "route": "human-review"}
+{"escalated": false, "high_risk": false, "intent": "insurance", "message_id": "m5", "reason_code": "COVERAGE_QUESTION", "recognized": true, "route": "queue:insurance"}
+{"escalated": false, "high_risk": false, "intent": "admin", "message_id": "m6", "reason_code": "RECORDS_REQUEST", "recognized": true, "route": "queue:admin"}
+{"escalated": true, "high_risk": true, "intent": "medication", "message_id": "m7", "reason_code": "MED_OVERDOSE", "recognized": true, "route": "human-review"}
+{"escalated": true, "high_risk": false, "intent": "smalltalk", "message_id": "m8", "reason_code": "OFF_TOPIC", "recognized": false, "route": "human-review"}
+{"escalated": true, "high_risk": false, "intent": "unknown", "message_id": "m9", "reason_code": "UNPARSEABLE", "recognized": false, "route": "human-review"}

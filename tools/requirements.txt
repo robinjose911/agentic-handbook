@@ -1,0 +1,5 @@
+# Validators + tooling deps. Kept deliberately small and wheel-friendly.
+# Image and PDF generation are pure-stdlib (tools/stubs/png_writer.py, tools/presentations/),
+# so there is no Pillow / matplotlib / reportlab to install.
+pytest>=8.0
+jsonschema>=4.0

@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "expectedIntent": "billing",
+      "expectedRoute": "billing",
+      "gotIntent": "billing",
+      "gotRoute": "billing",
+      "id": "t1",
+      "pass": true
+    },
+    {
+      "expectedIntent": "technical",
+      "expectedRoute": "technical",
+      "gotIntent": "technical",
+      "gotRoute": "technical",
+      "id": "t2",
+      "pass": true
+    },
+    {
+      "expectedIntent": "account",
+      "expectedRoute": "account",
+      "gotIntent": "account",
+      "gotRoute": "account",
+      "id": "t3",
+      "pass": true
+    },
+    {
+      "expectedIntent": "billing",
+      "expectedRoute": "billing",
+      "gotIntent": "billing",
+      "gotRoute": "billing",
+      "id": "t4",
+      "pass": true
+    },
+    {
+      "expectedIntent": "other",
+      "expectedRoute": "human-review",
+      "gotIntent": "other",
+      "gotRoute": "human-review",
+      "id": "t5",
+      "pass": true
+    },
+    {
+      "expectedIntent": "account",
+      "expectedRoute": "account",
+      "gotIntent": "account",
+      "gotRoute": "account",
+      "id": "t6",
+      "pass": true
+    }
+  ],
+  "gate": 0.8,
+  "passRate": 1,
+  "passed": 6,
+  "suite": "support-triage-classification",
+  "total": 6
+}

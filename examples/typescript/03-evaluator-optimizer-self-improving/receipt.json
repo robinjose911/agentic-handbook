@@ -1,0 +1,18 @@
+{
+  "example": "03-evaluator-optimizer-self-improving",
+  "finalDraft": "Backend engineers: trace any API failure to its root cause in minutes",
+  "finalScore": 0.88,
+  "gate": 0.85,
+  "gatePassed": true,
+  "headline": {
+    "finalScore": "0.88",
+    "gate": "0.85",
+    "gatePassed": true,
+    "iterations": 3,
+    "scoreClimb": "0.55 -> 0.72 -> 0.88",
+    "traceEvents": 9
+  },
+  "iterations": 3,
+  "task": "headline-1",
+  "traceEvents": 9
+}

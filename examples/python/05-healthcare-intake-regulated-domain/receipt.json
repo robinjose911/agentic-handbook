@@ -1,0 +1,26 @@
+{
+  "auditEntries": 9,
+  "euAiActWiring": {
+    "article_11_technical_documentation": "technical-doc.json",
+    "article_12_record_keeping": "audit-log.jsonl",
+    "article_14_human_oversight": "high-risk intents escalate to human-review"
+  },
+  "example": "05-healthcare-intake-regulated-domain",
+  "failSafeCases": 2,
+  "frame": "educational architecture demo, not medical advice",
+  "headline": {
+    "auditEntries": 9,
+    "escalationsHonored": "5/5",
+    "failSafeCases": 2,
+    "medicalHighRisk": 3,
+    "noSilentAutoHandle": true,
+    "traceEvents": 18
+  },
+  "intentsHandled": 9,
+  "medicalHighRisk": 3,
+  "mustEscalateMade": 5,
+  "mustEscalateTotal": 5,
+  "noSilentAutoHandle": true,
+  "safetyAllPass": true,
+  "traceEvents": 18
+}

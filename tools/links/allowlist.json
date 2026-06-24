@@ -1,0 +1,10 @@
+{
+  "_comment": "External URLs exempt from hard link-checking: future-dated June-2026 specs and rate-limited hosts. Each entry carries a reason. Used by the link-checker (Stages 0 + 7).",
+  "allow": [
+    { "pattern": "https://x.com/", "reason": "x.com rate-limits/blocks automated HEAD requests" },
+    { "pattern": "https://twitter.com/", "reason": "rate-limited; redirects to x.com" },
+    { "pattern": "https://www.linkedin.com/", "reason": "blocks automated requests behind auth wall" },
+    { "pattern": "https://artificialintelligenceact.eu/", "reason": "EU AI Act portal; occasionally rate-limits" },
+    { "pattern": "https://eur-lex.europa.eu/", "reason": "EUR-Lex official text; slow/rate-limited under automation" }
+  ]
+}

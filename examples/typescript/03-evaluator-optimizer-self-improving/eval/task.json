@@ -1,0 +1,33 @@
+{
+  "id": "headline-1",
+  "brief": "Launch headline for a self-serve API observability tool aimed at backend engineers. Must name the audience, lead with the outcome, and stay under 12 words.",
+  "rubric": "Score 0-1. Reward: names the audience (backend engineers), leads with a concrete outcome, is under 12 words, and avoids vague hype. Penalize generic buzzwords.",
+  "gate": 0.85,
+  "maxIterations": 4,
+  "script": [
+    {
+      "iteration": 1,
+      "draft": "Observability, reimagined for the modern cloud-native era",
+      "score": 0.55,
+      "critique": "Pure buzzwords: name the audience and lead with a concrete outcome, and drop 'reimagined'."
+    },
+    {
+      "iteration": 2,
+      "draft": "Backend engineers: understand your API faster with full-stack observability",
+      "score": 0.72,
+      "critique": "Better — names the audience, but 'understand faster' is vague; state the measurable outcome and trim to under 12 words."
+    },
+    {
+      "iteration": 3,
+      "draft": "Backend engineers: trace any API failure to its root cause in minutes",
+      "score": 0.88,
+      "critique": "Strong: names the audience, leads with a concrete outcome, no hype."
+    },
+    {
+      "iteration": 4,
+      "draft": "Backend engineers: trace any API failure to root cause in minutes",
+      "score": 0.91,
+      "critique": "Crisp and concrete; ship it."
+    }
+  ]
+}

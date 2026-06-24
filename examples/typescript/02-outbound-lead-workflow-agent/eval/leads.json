@@ -1,0 +1,57 @@
+[
+  {
+    "id": "l1",
+    "blurb": "Priya Nandakumar, VP Engineering at Meridian Robotics (820 staff), asked at a conference about cutting incident-response toil.",
+    "enrich": { "company": "Meridian Robotics", "segment": "enterprise", "persona": "VP Engineering" },
+    "enrichUsage": { "input_tokens": 120, "output_tokens": 30 },
+    "score": { "fit": 86, "recommended_action": "send_outreach" },
+    "scoreUsage": { "input_tokens": 90, "output_tokens": 12 },
+    "expectedAction": "send_outreach",
+    "expectedDecision": "awaiting_approval",
+    "approve": true
+  },
+  {
+    "id": "l2",
+    "blurb": "Tom Castellano runs ops at a 24-person logistics startup, downloaded the pricing PDF twice this week.",
+    "enrich": { "company": "Castellano Logistics", "segment": "smb", "persona": "Head of Operations" },
+    "enrichUsage": { "input_tokens": 118, "output_tokens": 28 },
+    "score": { "fit": 71, "recommended_action": "send_outreach" },
+    "scoreUsage": { "input_tokens": 88, "output_tokens": 12 },
+    "expectedAction": "send_outreach",
+    "expectedDecision": "rejected",
+    "approve": false
+  },
+  {
+    "id": "l3",
+    "blurb": "Inbound form from 'aigist24@example.com' with a long pasted RFP appendix and no clear buyer named.",
+    "enrich": { "company": "AIGist24 Holdings", "segment": "mid-market", "persona": "Unknown" },
+    "enrichUsage": { "input_tokens": 200, "output_tokens": 360 },
+    "score": { "fit": 40, "recommended_action": "nurture" },
+    "scoreUsage": { "input_tokens": 95, "output_tokens": 12 },
+    "expectedAction": "budget_exhausted",
+    "expectedDecision": "budget_exhausted",
+    "approve": false
+  },
+  {
+    "id": "l4",
+    "blurb": "Dana Whitfield, IT Director at Northwind School District, replied 'not now, maybe next budget cycle'.",
+    "enrich": { "company": "Northwind School District", "segment": "mid-market", "persona": "IT Director" },
+    "enrichUsage": { "input_tokens": 122, "output_tokens": 31 },
+    "score": { "fit": 52, "recommended_action": "nurture" },
+    "scoreUsage": { "input_tokens": 91, "output_tokens": 12 },
+    "expectedAction": "nurture",
+    "expectedDecision": "auto_nurture",
+    "approve": false
+  },
+  {
+    "id": "l5",
+    "blurb": "Anonymous gmail signup, free-mail domain, job title 'student', flagged by the spam heuristic.",
+    "enrich": { "company": "unknown", "segment": "smb", "persona": "Student" },
+    "enrichUsage": { "input_tokens": 110, "output_tokens": 26 },
+    "score": { "fit": 9, "recommended_action": "disqualify" },
+    "scoreUsage": { "input_tokens": 85, "output_tokens": 12 },
+    "expectedAction": "disqualify",
+    "expectedDecision": "auto_disqualify",
+    "approve": false
+  }
+]

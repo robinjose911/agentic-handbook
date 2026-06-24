@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/agentic-handbook/templates/observability-event-schema.json",
+  "title": "Agent Observability Event",
+  "description": "One lifecycle event emitted by an agent run. Aligned with the OpenTelemetry GenAI semantic conventions: every event carries trace/span ids so a full run can be reconstructed, and sensitive payloads are referenced (payload_ref) rather than inlined. Copy this schema, keep the required fields, and extend `attributes` for your domain.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "trace_id", "timestamp", "event_type", "status"],
+  "properties": {
+    "event_id": { "type": "string", "description": "Unique id for this event." },
+    "trace_id": { "type": "string", "description": "Id of the whole agent run/task." },
+    "span_id": { "type": "string", "description": "Id of this step." },
+    "parent_span_id": { "type": "string", "description": "Enclosing step, if any." },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "event_type": {
+      "type": "string",
+      "enum": ["agent_step", "llm_call", "tool_call", "decision", "approval", "escalation", "error"]
+    },
+    "agent": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "capability_tier": { "type": "string", "enum": ["L0", "L1", "L2", "L3", "L4"] }
+      }
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "provider": { "type": "string" }
+      }
+    },
+    "tool": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "side_effecting": { "type": "boolean" },
+        "approved_by": { "type": ["string", "null"] }
+      }
+    },
+    "tokens": {
+      "type": "object",
+      "properties": {
+        "input": { "type": "integer", "minimum": 0 },
+        "output": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "cost_usd": { "type": "number", "minimum": 0 },
+    "duration_ms": { "type": "number", "minimum": 0 },
+    "status": { "type": "string", "enum": ["ok", "error", "escalated", "rejected"] },
+    "payload_ref": {
+      "type": "string",
+      "description": "Reference (uri/key) to the full prompt/response/args stored out-of-band, so sensitive payloads are not inlined in logs."
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "message": { "type": "string" }
+      }
+    },
+    "attributes": {
+      "type": "object",
+      "description": "Free-form domain attributes (OTel-style key/value).",
+      "additionalProperties": true
+    }
+  },
+  "examples": [
+    {
+      "event_id": "evt_01HQ3",
+      "trace_id": "trace_a1",
+      "span_id": "span_2",
+      "parent_span_id": "span_1",
+      "timestamp": "2026-06-24T10:15:30Z",
+      "event_type": "llm_call",
+      "agent": { "name": "support-triage", "capability_tier": "L1" },
+      "model": { "name": "claude-haiku-4-5", "provider": "anthropic" },
+      "tokens": { "input": 412, "output": 18 },
+      "cost_usd": 0.0009,
+      "duration_ms": 640,
+      "status": "ok",
+      "payload_ref": "s3://traces/trace_a1/span_2.json"
+    },
+    {
+      "event_id": "evt_01HQ7",
+      "trace_id": "trace_a1",
+      "span_id": "span_5",
+      "parent_span_id": "span_1",
+      "timestamp": "2026-06-24T10:15:33Z",
+      "event_type": "tool_call",
+      "agent": { "name": "support-triage", "capability_tier": "L1" },
+      "tool": { "name": "issue_refund", "side_effecting": true, "approved_by": "ops:jordan" },
+      "duration_ms": 120,
+      "status": "ok",
+      "attributes": { "amount_usd": 40, "order_id": "ord_88" }
+    },
+    {
+      "event_id": "evt_01HQ9",
+      "trace_id": "trace_b2",
+      "span_id": "span_3",
+      "timestamp": "2026-06-24T10:20:01Z",
+      "event_type": "escalation",
+      "agent": { "name": "support-triage", "capability_tier": "L1" },
+      "duration_ms": 5,
+      "status": "escalated",
+      "attributes": { "reason": "low_confidence", "queue": "human-review" }
+    }
+  ]
+}

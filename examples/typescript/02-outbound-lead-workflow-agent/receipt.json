@@ -1,0 +1,22 @@
+{
+  "approved": 1,
+  "autoDisqualified": 1,
+  "autoNurtured": 1,
+  "budgetHonored": true,
+  "budgetStopped": 1,
+  "costCapUsd": 0.015,
+  "example": "02-outbound-lead-workflow-agent",
+  "headline": {
+    "budgetHonored": true,
+    "costCapUsd": 0.015,
+    "leadsProcessed": 5,
+    "maxLeadCostUsd": 0.006,
+    "traceEvents": 16
+  },
+  "leadsProcessed": 5,
+  "maxLeadCostUsd": 0.006,
+  "passed": 5,
+  "rejected": 1,
+  "total": 5,
+  "traceEvents": 16
+}

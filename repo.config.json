@@ -1,0 +1,76 @@
+{
+  "owner": "OWNER_PLACEHOLDER",
+  "repoName": "agentic-handbook",
+  "theme": "neutral",
+  "tagline": "The CPTO's playbook for agentic AI: patterns, anti-patterns, decision trees, and procurement-grade checklists for shipping reliable agents in production.",
+  "definition": "Production agents fail because the system around the model is weak. The seven surfaces of a reliable agent system spell AGENTIC.",
+  "mnemonic": {
+    "word": "AGENTIC",
+    "surfaces": [
+      {
+        "letter": "A",
+        "name": "Autonomy",
+        "blurb": "How much the agent decides for itself, and where the workflow rails are.",
+        "chapters": ["02-decision-framework", "03-pattern-catalog"]
+      },
+      {
+        "letter": "G",
+        "name": "Goals",
+        "blurb": "Design specs and structured outputs that pin down what the agent is for.",
+        "chapters": ["00-introduction", "03-pattern-catalog"]
+      },
+      {
+        "letter": "E",
+        "name": "Evaluation",
+        "blurb": "The eval-driven loop and the observability that proves the agent works.",
+        "chapters": ["13-evaluations", "14-observability-lite"]
+      },
+      {
+        "letter": "N",
+        "name": "Networks",
+        "blurb": "The protocol stack that connects agents to tools and to each other (Skills/MCP/A2A).",
+        "chapters": ["06-protocol-stack-skills-mcp-a2a"]
+      },
+      {
+        "letter": "T",
+        "name": "Trust",
+        "blurb": "Security, the threat model, the EU AI Act, and the anti-patterns that get you breached.",
+        "chapters": ["11-security-and-threat-model", "12-eu-ai-act-as-architecture", "17-anti-patterns"]
+      },
+      {
+        "letter": "I",
+        "name": "Identity",
+        "blurb": "Who the agent is, what it is allowed to do, and how it authenticates.",
+        "chapters": ["10-agent-identity-and-auth"]
+      },
+      {
+        "letter": "C",
+        "name": "Cost",
+        "blurb": "The cost stack and model selection that keep the bill survivable.",
+        "chapters": ["15-cost-stack", "09-model-selection-for-roles"]
+      }
+    ]
+  },
+  "capabilityLadder": [
+    { "tier": "L0", "name": "Suggest-only", "euRiskClass": "minimal", "criteria": "Drafts and suggestions; a human takes every consequential action." },
+    { "tier": "L1", "name": "Act-with-approval", "euRiskClass": "limited", "criteria": "Agent proposes actions; a human approves each before execution." },
+    { "tier": "L2", "name": "Act-with-guardrails", "euRiskClass": "limited", "criteria": "Agent acts inside hard, pre-execution policy limits; humans review after the fact." },
+    { "tier": "L3", "name": "Act-autonomously", "euRiskClass": "high-risk", "criteria": "Agent acts unattended within a bounded domain; HITL only on flagged exceptions." },
+    { "tier": "L4", "name": "Self-directed", "euRiskClass": "prohibited", "criteria": "Agent sets and revises its own goals across domains without scoped human oversight." }
+  ],
+  "badges": [
+    { "label": "CI", "kind": "github-actions", "workflow": "ci.yml" },
+    { "label": "License", "kind": "static", "message": "MIT", "color": "blue" },
+    { "label": "Examples", "kind": "static", "message": "5 runnable", "color": "green" },
+    { "label": "Provider", "kind": "static", "message": "mock / offline", "color": "lightgrey" }
+  ],
+  "buttons": [
+    { "label": "Learn the patterns", "href": "docs/03-pattern-catalog.md" },
+    { "label": "Grab a template", "href": "templates/README.md" },
+    { "label": "See one run", "href": "examples/README.md" }
+  ],
+  "decisionTreeCta": { "label": "Start with the decision tree", "href": "docs/02-decision-framework.md" },
+  "socialPreviewText": "AGENTIC: the seven surfaces of a reliable agent system. A vendor-neutral, CPTO-grade playbook for shipping agents in production.",
+  "accuracyStance": "label-and-cite",
+  "accuracyAsOf": "June 2026"
+}

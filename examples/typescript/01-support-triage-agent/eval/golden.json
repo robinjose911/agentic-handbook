@@ -1,0 +1,8 @@
+[
+  { "id": "t1", "text": "My card was declined when I tried to pay the invoice.", "urgency": "high", "expectedIntent": "billing", "expectedRoute": "billing" },
+  { "id": "t2", "text": "The app crashes every time I open the reports tab.", "urgency": "high", "expectedIntent": "technical", "expectedRoute": "technical" },
+  { "id": "t3", "text": "I need to update the email address on my account.", "urgency": "low", "expectedIntent": "account", "expectedRoute": "account" },
+  { "id": "t4", "text": "Why was I charged twice this month?", "urgency": "medium", "expectedIntent": "billing", "expectedRoute": "billing" },
+  { "id": "t5", "text": "Can you tell me a joke about kubernetes?", "urgency": "low", "expectedIntent": "other", "expectedRoute": "human-review" },
+  { "id": "t6", "text": "I can't log in — it says my password is wrong but it isn't.", "urgency": "high", "expectedIntent": "account", "expectedRoute": "account" }
+]

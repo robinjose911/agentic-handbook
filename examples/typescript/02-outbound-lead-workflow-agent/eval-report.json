@@ -1,0 +1,73 @@
+{
+  "aggregate": {
+    "approved": 1,
+    "autoDisqualified": 1,
+    "autoNurtured": 1,
+    "budgetStopped": 1,
+    "leadsProcessed": 5,
+    "rejected": 1
+  },
+  "budgetHonored": true,
+  "cases": [
+    {
+      "company": "Meridian Robotics",
+      "costUsd": 0.00126,
+      "expectedDecision": "awaiting_approval",
+      "fit": 86,
+      "gotDecision": "awaiting_approval",
+      "id": "l1",
+      "pass": true,
+      "recommendedAction": "send_outreach",
+      "underCap": true
+    },
+    {
+      "company": "Castellano Logistics",
+      "costUsd": 0.001218,
+      "expectedDecision": "rejected",
+      "fit": 71,
+      "gotDecision": "rejected",
+      "id": "l2",
+      "pass": true,
+      "recommendedAction": "send_outreach",
+      "underCap": true
+    },
+    {
+      "company": "AIGist24 Holdings",
+      "costUsd": 0.006,
+      "expectedDecision": "budget_exhausted",
+      "fit": null,
+      "gotDecision": "budget_exhausted",
+      "id": "l3",
+      "pass": true,
+      "recommendedAction": null,
+      "underCap": true
+    },
+    {
+      "company": "Northwind School District",
+      "costUsd": 0.001284,
+      "expectedDecision": "auto_nurture",
+      "fit": 52,
+      "gotDecision": "auto_nurture",
+      "id": "l4",
+      "pass": true,
+      "recommendedAction": "nurture",
+      "underCap": true
+    },
+    {
+      "company": "unknown",
+      "costUsd": 0.001155,
+      "expectedDecision": "auto_disqualify",
+      "fit": 9,
+      "gotDecision": "auto_disqualify",
+      "id": "l5",
+      "pass": true,
+      "recommendedAction": "disqualify",
+      "underCap": true
+    }
+  ],
+  "costCapUsd": 0.015,
+  "maxLeadCostUsd": 0.006,
+  "passed": 5,
+  "suite": "outbound-lead-workflow",
+  "total": 5
+}

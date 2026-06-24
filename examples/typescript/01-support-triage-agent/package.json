@@ -1,0 +1,18 @@
+{
+  "name": "@agentic-handbook/example-01-support-triage",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reference example 01: support-triage agent (classify -> route -> evaluate) against the mock provider.",
+  "scripts": {
+    "run": "node --experimental-strip-types run.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0",
+    "zod": "^3.24.0"
+  }
+}

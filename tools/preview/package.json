@@ -1,0 +1,16 @@
+{
+  "name": "agentic-handbook-preview",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local markdown render harness that stands in for GitHub's renderer so we never push to test.",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node serve.mjs",
+    "test": "node test_build.mjs"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0"
+  }
+}

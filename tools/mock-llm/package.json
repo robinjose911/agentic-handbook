@@ -1,0 +1,17 @@
+{
+  "name": "@agentic-handbook/mock-llm",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic, offline mock LLM provider (hash-keyed canned responses) shared by every example.",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "test": "node --experimental-strip-types index.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

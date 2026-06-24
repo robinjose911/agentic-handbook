@@ -1,0 +1,20 @@
+{
+  "claimsGrounded": 8,
+  "claimsTotal": 8,
+  "example": "04-research-synthesis-multi-agent",
+  "gate": 1.0,
+  "gatePassed": true,
+  "groundednessScore": 1.0,
+  "headline": {
+    "claimsGrounded": "8/8",
+    "groundednessScore": "100%",
+    "orchestratorTokens": 530,
+    "traceEvents": 7,
+    "workerTokens": 520
+  },
+  "orchestratorTokens": 530,
+  "pattern": "orchestrator-worker with explicit artifact handoff",
+  "totalTokens": 1050,
+  "traceEvents": 7,
+  "workerTokens": 520
+}

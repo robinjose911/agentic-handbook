@@ -1,0 +1,15 @@
+{
+  "name": "agentic-handbook-e2e",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright integration render-checks against the locally rendered preview.",
+  "scripts": {
+    "test": "playwright test",
+    "test:helpers": "node --experimental-strip-types helpers/urls.selftest.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0"
+  }
+}

@@ -1,0 +1,36 @@
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#F1EFFA",
+    "primaryTextColor": "#2A2A2A",
+    "primaryBorderColor": "#714EC4",
+    "secondaryColor": "#E7F2FF",
+    "secondaryBorderColor": "#0E6995",
+    "tertiaryColor": "#FFF4E6",
+    "tertiaryBorderColor": "#E1AB2F",
+    "lineColor": "#5F5F5F",
+    "textColor": "#404040",
+    "mainBkg": "#F1EFFA",
+    "clusterBkg": "#F2F5F7",
+    "clusterBorder": "#E0E0E0",
+    "edgeLabelBackground": "#FCFCFC",
+    "fontFamily": "Inter, -apple-system, sans-serif",
+    "fontSize": "14px"
+  }
+}}%%
+flowchart TB
+  start(["Task to automate"]) --> q1{"Deterministic, fixed<br/>set of steps?"}
+  q1 -->|Yes| code["Write plain code<br/>(no LLM)"]:::external
+  q1 -->|No| q2{"Does it need a<br/>model's judgement?"}
+  q2 -->|"Single judgement"| call["One LLM call<br/>+ structured output"]:::primary
+  q2 -->|"Several known steps"| q3{"Steps known<br/>in advance?"}
+  q3 -->|Yes| wf["Workflow:<br/>chain / route / parallelize"]:::secondary
+  q3 -->|"No — model must<br/>choose its own path"| q4{"How much autonomy<br/>can you allow? (L0-L4)"}
+  q4 -->|"L1-L2: act with<br/>approval / guardrails"| agentG["Agent loop<br/>inside hard limits<br/>+ HITL gates"]:::primary
+  q4 -->|"L3: act unattended<br/>in a bounded domain"| agentA["Autonomous agent<br/>+ evals + kill switch"]:::tertiary
+  q4 -->|"L4: self-directed,<br/>cross-domain"| stop["Stop. Prohibited tier —<br/>redesign the scope"]:::tertiary
+
+  classDef primary fill:#F1EFFA,stroke:#714EC4,stroke-width:2px,color:#2A2A2A
+  classDef secondary fill:#E7F2FF,stroke:#0E6995,stroke-width:2px,color:#2A2A2A
+  classDef tertiary fill:#FFF4E6,stroke:#E1AB2F,stroke-width:2px,color:#2A2A2A
+  classDef external fill:#F0F0F0,stroke:#808080,stroke-width:1.5px,color:#404040,stroke-dasharray: 4 2

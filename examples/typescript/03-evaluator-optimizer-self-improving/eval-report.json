@@ -1,0 +1,25 @@
+{
+  "finalScore": 0.88,
+  "gate": 0.85,
+  "gatePassed": true,
+  "iterations": 3,
+  "ledger": [
+    {
+      "iteration": 1,
+      "passed": false,
+      "score": 0.55
+    },
+    {
+      "iteration": 2,
+      "passed": false,
+      "score": 0.72
+    },
+    {
+      "iteration": 3,
+      "passed": true,
+      "score": 0.88
+    }
+  ],
+  "scoreClimb": "0.55 -> 0.72 -> 0.88",
+  "suite": "headline-evaluator-optimizer"
+}

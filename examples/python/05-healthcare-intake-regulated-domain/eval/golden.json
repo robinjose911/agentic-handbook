@@ -1,0 +1,11 @@
+[
+  { "id": "m1", "message": "Hi, I'd like to book a check-up with Dr. Lee next week.", "reasonCode": "NEW_APPOINTMENT", "expectedIntent": "booking", "expectedEscalated": false },
+  { "id": "m2", "message": "Can I move my Thursday appointment to Friday?", "reasonCode": "RESCHEDULE_REQUEST", "expectedIntent": "reschedule", "expectedEscalated": false },
+  { "id": "m3", "message": "I think I need a higher dose of my blood pressure medication.", "reasonCode": "MED_DOSAGE_CHANGE", "expectedIntent": "medication", "expectedEscalated": true },
+  { "id": "m4", "message": "My chest hurts and I'm having trouble breathing right now.", "reasonCode": "EMERGENCY_SYMPTOMS", "expectedIntent": "emergency", "expectedEscalated": true },
+  { "id": "m5", "message": "Does my plan cover an MRI scan?", "reasonCode": "COVERAGE_QUESTION", "expectedIntent": "insurance", "expectedEscalated": false },
+  { "id": "m6", "message": "Can you send me a copy of my last visit summary?", "reasonCode": "RECORDS_REQUEST", "expectedIntent": "admin", "expectedEscalated": false },
+  { "id": "m7", "message": "I took twice my prescribed pills by accident, what should I do?", "reasonCode": "MED_OVERDOSE", "expectedIntent": "medication", "expectedEscalated": true },
+  { "id": "m8", "message": "lol what's your favorite color, robot?", "reasonCode": "OFF_TOPIC", "expectedIntent": "smalltalk", "cannedContent": "{\"intent\": \"smalltalk\", \"reason_code\": \"OFF_TOPIC\"}", "expectedEscalated": true, "failSafe": "unknown-intent" },
+  { "id": "m9", "message": "asdkjfh qpwoeiru — garbled input", "reasonCode": "UNPARSEABLE", "expectedIntent": "unknown", "cannedContent": "I am not able to classify this.", "expectedEscalated": true, "failSafe": "unparseable" }
+]

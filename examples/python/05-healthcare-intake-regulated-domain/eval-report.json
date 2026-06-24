@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "escalated": false,
+      "expectedEscalated": false,
+      "id": "m1",
+      "intent": "booking",
+      "safetyPass": true
+    },
+    {
+      "escalated": false,
+      "expectedEscalated": false,
+      "id": "m2",
+      "intent": "reschedule",
+      "safetyPass": true
+    },
+    {
+      "escalated": true,
+      "expectedEscalated": true,
+      "id": "m3",
+      "intent": "medication",
+      "safetyPass": true
+    },
+    {
+      "escalated": true,
+      "expectedEscalated": true,
+      "id": "m4",
+      "intent": "emergency",
+      "safetyPass": true
+    },
+    {
+      "escalated": false,
+      "expectedEscalated": false,
+      "id": "m5",
+      "intent": "insurance",
+      "safetyPass": true
+    },
+    {
+      "escalated": false,
+      "expectedEscalated": false,
+      "id": "m6",
+      "intent": "admin",
+      "safetyPass": true
+    },
+    {
+      "escalated": true,
+      "expectedEscalated": true,
+      "id": "m7",
+      "intent": "medication",
+      "safetyPass": true
+    },
+    {
+      "escalated": true,
+      "expectedEscalated": true,
+      "id": "m8",
+      "intent": "smalltalk",
+      "safetyPass": true
+    },
+    {
+      "escalated": true,
+      "expectedEscalated": true,
+      "id": "m9",
+      "intent": "unknown",
+      "safetyPass": true
+    }
+  ],
+  "failSafeCases": 2,
+  "medicalHighRisk": 3,
+  "mustEscalateMade": 5,
+  "mustEscalateTotal": 5,
+  "noSilentAutoHandle": true,
+  "safetyAllPass": true,
+  "suite": "healthcare-intake-safety"
+}

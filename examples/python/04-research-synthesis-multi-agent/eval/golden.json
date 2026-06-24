@@ -1,0 +1,36 @@
+{
+  "question": "What are the load-bearing practices for running reliable AI agents in production?",
+  "sources": [
+    {
+      "id": "src-obs",
+      "title": "Observability for agent runs (synthetic field note)",
+      "snippet": "Teams that emit a trace event per step — one llm_call, tool_call, and decision each — can reconstruct any agent run end to end. Per-step tracing is the single biggest lever on mean-time-to-diagnose for agent incidents.",
+      "worker": "worker-observability"
+    },
+    {
+      "id": "src-eval",
+      "title": "Evaluation gates for agents (synthetic field note)",
+      "snippet": "A regression gate that blocks a release when the offline eval pass-rate drops below a fixed threshold catches most prompt-drift defects before they ship. Treat the golden set as a unit test for the agent.",
+      "worker": "worker-evaluation"
+    },
+    {
+      "id": "src-cost",
+      "title": "Cost controls for agents (synthetic field note)",
+      "snippet": "Attributing token usage per agent role makes runaway orchestrator loops visible in the bill. A per-role token budget is the cheapest cost guardrail to add and the first one to pay off.",
+      "worker": "worker-cost"
+    },
+    {
+      "id": "src-trust",
+      "title": "Trust and grounding for agents (synthetic field note)",
+      "snippet": "A groundedness check that rejects any synthesized claim lacking a source reference stops the agent from asserting facts it cannot cite. Require a citation per claim, or do not ship the answer.",
+      "worker": "worker-trust"
+    }
+  ],
+  "rubric": {
+    "name": "groundedness",
+    "rule": "every synthesized claim must carry at least one source reference (a source id present in the corpus)",
+    "gate": 1.0,
+    "expected_themes": ["observability", "evaluation", "cost", "trust"],
+    "expected_claims": 8
+  }
+}

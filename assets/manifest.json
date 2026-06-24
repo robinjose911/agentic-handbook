@@ -1,0 +1,157 @@
+{
+  "slots": [
+    {
+      "id": "banner",
+      "kind": "banner",
+      "path": "assets/banner.png",
+      "width": 1280,
+      "height": 640,
+      "status": "real",
+      "label": "agentic-handbook banner"
+    },
+    {
+      "id": "social-preview",
+      "kind": "social",
+      "path": "assets/social-preview.png",
+      "width": 1280,
+      "height": 640,
+      "status": "real",
+      "label": "AGENTIC social preview"
+    },
+    {
+      "id": "00-hero-decision-tree",
+      "kind": "diagram",
+      "path": "assets/diagrams/00-hero-decision-tree.png",
+      "width": 912,
+      "height": 1279,
+      "status": "real",
+      "label": "Hero: agent vs workflow decision tree"
+    },
+    {
+      "id": "01-agent-loop",
+      "kind": "diagram",
+      "path": "assets/diagrams/01-agent-loop.png",
+      "width": 1552,
+      "height": 208,
+      "status": "real",
+      "label": "The agent loop"
+    },
+    {
+      "id": "02-workflow-vs-agent",
+      "kind": "diagram",
+      "path": "assets/diagrams/02-workflow-vs-agent.png",
+      "width": 726,
+      "height": 562,
+      "status": "real",
+      "label": "Workflow vs agent"
+    },
+    {
+      "id": "03-router-pattern",
+      "kind": "diagram",
+      "path": "assets/diagrams/03-router-pattern.png",
+      "width": 877,
+      "height": 370,
+      "status": "real",
+      "label": "Router pattern"
+    },
+    {
+      "id": "04-planner-executor",
+      "kind": "diagram",
+      "path": "assets/diagrams/04-planner-executor.png",
+      "width": 1286,
+      "height": 334,
+      "status": "real",
+      "label": "Planner / executor"
+    },
+    {
+      "id": "05-supervisor-worker",
+      "kind": "diagram",
+      "path": "assets/diagrams/05-supervisor-worker.png",
+      "width": 555,
+      "height": 460,
+      "status": "real",
+      "label": "Supervisor / worker"
+    },
+    {
+      "id": "06-evaluator-optimizer",
+      "kind": "diagram",
+      "path": "assets/diagrams/06-evaluator-optimizer.png",
+      "width": 1099,
+      "height": 232,
+      "status": "real",
+      "label": "Evaluator / optimizer"
+    },
+    {
+      "id": "07-tool-approval-flow",
+      "kind": "diagram",
+      "path": "assets/diagrams/07-tool-approval-flow.png",
+      "width": 602,
+      "height": 646,
+      "status": "real",
+      "label": "Tool approval flow"
+    },
+    {
+      "id": "08-eval-observability-loop",
+      "kind": "diagram",
+      "path": "assets/diagrams/08-eval-observability-loop.png",
+      "width": 1503,
+      "height": 204,
+      "status": "real",
+      "label": "Eval / observability loop"
+    },
+    {
+      "id": "09-capability-tier-ladder",
+      "kind": "diagram",
+      "path": "assets/diagrams/09-capability-tier-ladder.png",
+      "width": 586,
+      "height": 744,
+      "status": "real",
+      "label": "Capability tier ladder (L0-L4)"
+    },
+    {
+      "id": "10-lethal-trifecta-self-assessment",
+      "kind": "diagram",
+      "path": "assets/diagrams/10-lethal-trifecta-self-assessment.png",
+      "width": 774,
+      "height": 1030,
+      "status": "real",
+      "label": "Lethal trifecta self-assessment"
+    },
+    {
+      "id": "11-mcp-vs-a2a-stack",
+      "kind": "diagram",
+      "path": "assets/diagrams/11-mcp-vs-a2a-stack.png",
+      "width": 636,
+      "height": 432,
+      "status": "real",
+      "label": "MCP vs A2A stack"
+    },
+    {
+      "id": "12-codeact-decision",
+      "kind": "diagram",
+      "path": "assets/diagrams/12-codeact-decision.png",
+      "width": 1301,
+      "height": 304,
+      "status": "real",
+      "label": "CodeAct decision"
+    },
+    {
+      "id": "13-mcp-threat-model-attack-tree",
+      "kind": "diagram",
+      "path": "assets/diagrams/13-mcp-threat-model-attack-tree.png",
+      "width": 1088,
+      "height": 416,
+      "status": "real",
+      "label": "MCP threat-model attack tree"
+    },
+    {
+      "id": "14-durable-execution-outer-workflow",
+      "kind": "diagram",
+      "path": "assets/diagrams/14-durable-execution-outer-workflow.png",
+      "width": 1723,
+      "height": 301,
+      "status": "real",
+      "label": "Durable execution: outer workflow"
+    }
+  ]
+}

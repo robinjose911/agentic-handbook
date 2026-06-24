@@ -1,0 +1,21 @@
+{
+  "capability_tier": "L1 (act-with-approval)",
+  "eu_ai_act_risk_class": "high-risk (Annex III \u2014 health context raises the floor)",
+  "high_risk_intents": [
+    "emergency",
+    "medication"
+  ],
+  "human_oversight": "Article 14 \u2014 every high-risk intent goes to human-review; no auto-handling.",
+  "intents": [
+    "booking",
+    "reschedule",
+    "medication",
+    "emergency",
+    "insurance",
+    "admin"
+  ],
+  "limits": "Educational demo, not medical advice. Synthetic data only.",
+  "purpose": "Classify patient intake messages and route them; escalate all high-risk to a human.",
+  "record_keeping": "Article 12 \u2014 append-only audit-log.jsonl, one entry per decision.",
+  "system": "healthcare-intake-regulated-domain"
+}

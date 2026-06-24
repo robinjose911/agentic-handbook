@@ -1,0 +1,86 @@
+{
+  "claimsGrounded": 8,
+  "claimsTotal": 8,
+  "gate": 1.0,
+  "gatePassed": true,
+  "groundednessScore": 1.0,
+  "perClaim": [
+    {
+      "grounded": true,
+      "index": 0,
+      "sources": [
+        "src-obs"
+      ],
+      "text": "Observability: Emitting one trace event per agent step lets teams reconstruct any run end to end."
+    },
+    {
+      "grounded": true,
+      "index": 1,
+      "sources": [
+        "src-obs"
+      ],
+      "text": "Observability: Per-step tracing is the biggest lever on mean-time-to-diagnose for agent incidents."
+    },
+    {
+      "grounded": true,
+      "index": 2,
+      "sources": [
+        "src-eval"
+      ],
+      "text": "Evaluation: A regression gate that blocks releases below an eval pass-rate threshold catches prompt drift."
+    },
+    {
+      "grounded": true,
+      "index": 3,
+      "sources": [
+        "src-eval"
+      ],
+      "text": "Evaluation: Treating the golden set as a unit test for the agent surfaces defects before they ship."
+    },
+    {
+      "grounded": true,
+      "index": 4,
+      "sources": [
+        "src-cost"
+      ],
+      "text": "Cost: Attributing token usage per agent role makes runaway orchestrator loops visible in the bill."
+    },
+    {
+      "grounded": true,
+      "index": 5,
+      "sources": [
+        "src-cost"
+      ],
+      "text": "Cost: A per-role token budget is the cheapest cost guardrail and the first to pay off."
+    },
+    {
+      "grounded": true,
+      "index": 6,
+      "sources": [
+        "src-trust"
+      ],
+      "text": "Trust: A groundedness check rejects any synthesized claim that lacks a source reference."
+    },
+    {
+      "grounded": true,
+      "index": 7,
+      "sources": [
+        "src-trust"
+      ],
+      "text": "Trust: Requiring a citation per claim stops the agent from asserting facts it cannot cite."
+    }
+  ],
+  "question": "What are the load-bearing practices for running reliable AI agents in production?",
+  "suite": "research-synthesis-groundedness",
+  "themes": [
+    "Observability",
+    "Evaluation",
+    "Cost",
+    "Trust"
+  ],
+  "tokenSplit": {
+    "orchestrator": 530,
+    "total": 1050,
+    "worker": 520
+  }
+}

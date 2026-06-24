@@ -1,0 +1,61 @@
+# agentic-handbook
+
+> The CPTO's playbook for agentic AI: patterns, anti-patterns, decision trees, and procurement-grade
+> checklists for shipping reliable agents in production. Vendor-neutral, with an explicit EU AI Act lens.
+
+The seven surfaces of a reliable agent system spell **AGENTIC**: Autonomy, Goals, Evaluation, Networks,
+Trust, Identity, Cost. Start with the decision framework — most "agents" should be workflows.
+
+## Start here
+
+- [README](README.md): overview + the AGENTIC mnemonic
+- [Decision framework](docs/02-decision-framework.md): do you even need an agent?
+- [Capability tier ladder](templates/capability-tier-ladder.md): L0–L4 mapped to EU AI Act risk classes
+- [Examples](examples/README.md): runnable mini-codebases with committed run receipts
+
+## Guide (19 chapters)
+
+- [00 Introduction](docs/00-introduction.md)
+- [01 Mnemonic & systems map](docs/01-mnemonic-and-systems-map.md)
+- [02 Decision framework](docs/02-decision-framework.md)
+- [03 Pattern catalog](docs/03-pattern-catalog.md)
+- [04 Tool design & contracts](docs/04-tool-design-and-contracts.md)
+- [05 Memory, state & durable execution](docs/05-memory-state-and-durable-execution.md)
+- [06 Protocol stack: Skills, MCP, A2A](docs/06-protocol-stack-skills-mcp-a2a.md)
+- [07 CodeAct vs tool calls](docs/07-codeact-vs-tool-calls.md)
+- [08 Computer-use & browser agents](docs/08-computer-use-and-browser-agents.md)
+- [09 Model selection for roles](docs/09-model-selection-for-roles.md)
+- [10 Agent identity & auth](docs/10-agent-identity-and-auth.md)
+- [11 Security & threat model](docs/11-security-and-threat-model.md)
+- [12 EU AI Act as architecture](docs/12-eu-ai-act-as-architecture.md)
+- [13 Evaluations](docs/13-evaluations.md)
+- [14 Observability (lite)](docs/14-observability-lite.md)
+- [15 Cost stack](docs/15-cost-stack.md)
+- [16 Production readiness](docs/16-production-readiness.md)
+- [17 Anti-patterns](docs/17-anti-patterns.md)
+- [18 Case studies](docs/18-case-studies.md)
+
+## Templates (16)
+
+- [agent-design-spec](templates/agent-design-spec.md)
+- [tool-contract-template](templates/tool-contract-template.md)
+- [eval-plan-template](templates/eval-plan-template.md)
+- [production-readiness-checklist](templates/production-readiness-checklist.md)
+- [human-in-the-loop-policy](templates/human-in-the-loop-policy.md)
+- [agent-risk-register](templates/agent-risk-register.md)
+- [postmortem-template](templates/postmortem-template.md)
+- [capability-tier-ladder](templates/capability-tier-ladder.md)
+- [roi-framework](templates/roi-framework.md)
+- [agent-vendor-rfp](templates/agent-vendor-rfp.md)
+- [build-vs-buy-harness](templates/build-vs-buy-harness.md)
+- [mcp-server-governance](templates/mcp-server-governance.md)
+- [prompt-injection-threat-model](templates/prompt-injection-threat-model.md)
+- [agent-slo-definition](templates/agent-slo-definition.md)
+- [escalation-runbook](templates/escalation-runbook.md)
+- [observability-event-schema](templates/observability-event-schema.json)
+
+## Reference
+
+- [Diagrams](assets/diagrams/README.md): 15 Mermaid diagrams (sources included)
+- [References](references.md): the citation backbone
+- [AGENTS.md](AGENTS.md): how coding assistants should work in this repo

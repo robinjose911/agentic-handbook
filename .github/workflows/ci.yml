@@ -1,0 +1,91 @@
+name: CI
+
+# The green CI badge is itself a trust marker: it proves the validators, the example suites, the
+# preview build, and the render-checks all pass on a clean checkout.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: validators + render-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Python deps
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r tools/requirements.txt
+
+      - name: Install Node deps (preview, mock-llm, e2e)
+        run: |
+          npm --prefix tools/preview ci || npm --prefix tools/preview install
+          npm --prefix tools/mock-llm ci || npm --prefix tools/mock-llm install
+          npm --prefix tests/e2e ci || npm --prefix tests/e2e install
+
+      - name: Run unit validators (+ preview + mock-llm node checks)
+        run: .venv/bin/python tools/validate/all.py
+
+      - name: Type-check the mock provider
+        run: npm --prefix tools/mock-llm run typecheck
+
+      - name: URL-classifier self-test
+        run: node --experimental-strip-types tests/e2e/helpers/urls.selftest.mjs
+
+      - name: Install Playwright browser
+        run: npx --prefix tests/e2e playwright install --with-deps chromium
+
+      - name: Render-check (Playwright)
+        run: npm --prefix tests/e2e test
+
+  examples:
+    name: runnable examples (mock provider)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Python venv
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r tools/requirements.txt
+
+      # The five runnable examples run offline against the mock provider — no API key, no network.
+      - name: TypeScript examples (Vitest + typecheck)
+        run: |
+          for d in examples/typescript/*/; do
+            npm --prefix "$d" ci || npm --prefix "$d" install
+            npm --prefix "$d" run typecheck
+            npm --prefix "$d" test
+          done
+
+      - name: Python examples (Pytest)
+        run: |
+          for d in examples/python/*/; do
+            .venv/bin/python -m pytest -q "$d"
+          done
+
+      # With the TS deps installed, the shared determinism + receipt gate re-runs every example.
+      - name: Determinism + receipt gate
+        run: .venv/bin/python -m pytest -q tools/validate/test_examples.py

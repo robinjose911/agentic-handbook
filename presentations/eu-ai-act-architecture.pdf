@@ -1,0 +1,98 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 2066 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+72 720 Td
+(EU AI Act as Architecture - board one-pager) Tj T*
+() Tj T*
+(Read the EU AI Act as architecture, not paperwork. Three articles describe components you) Tj T*
+(build into) Tj T*
+(the system - or bolt on expensively later. Build them in.) Tj T*
+() Tj T*
+(The three articles as components) Tj T*
+() Tj T*
+(- Article 11 - Technical documentation. A living agent design spec + the capability-tier) Tj T*
+(entry,) Tj T*
+(generated from the system, not written about it after the fact.) Tj T*
+(- Article 12 - Record-keeping / traceability. An immutable audit log and lifecycle traces;) Tj T*
+(every) Tj T*
+(decision, tool call, and approval reconstructable.) Tj T*
+(- Article 14 - Human oversight. A human-in-the-loop policy and a kill switch wired into) Tj T*
+(the loop - not) Tj T*
+(a person told to keep an eye on it.) Tj T*
+() Tj T*
+(Risk classes) Tj T*
+() Tj T*
+(The Act classifies by use case and context: minimal, limited, high-risk, prohibited. Map) Tj T*
+(each agent's) Tj T*
+(capability tier to the risk class it floors at \(see the capability-tier ladder one-pager\).) Tj T*
+(A sensitive) Tj T*
+(domain raises the floor regardless of autonomy.) Tj T*
+() Tj T*
+(What it buys you) Tj T*
+() Tj T*
+(Designing to Articles 11/12/14 from day one yields an agent that is auditable, stoppable,) Tj T*
+(and) Tj T*
+(documented - exactly what a board wants before sign-off and what the production-readiness) Tj T*
+(checklist) Tj T*
+(demands. The EU lens is not overhead; it is the same discipline that makes security and) Tj T*
+(evaluation) Tj T*
+(trustworthy, in a form a regulator recognizes.) Tj T*
+() Tj T*
+(The differentiator) Tj T*
+() Tj T*
+(US-centric playbooks skip this. A European CPTO cannot. Treating compliance as) Tj T*
+(architecture is how you) Tj T*
+(ship agents in regulated markets without a last-minute scramble - and how you turn "can we) Tj T*
+(even do) Tj T*
+(this?" into a one-page answer.) Tj T*
+() Tj T*
+(This is an architectural aid, not legal advice. Confirm classification against current EU) Tj T*
+(AI Act) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 120 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+72 720 Td
+(guidance for your specific use case \(as of June 2026 - verify before relying\).) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000002309 00000 n 
+0000002435 00000 n 
+0000002606 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2732
+%%EOF

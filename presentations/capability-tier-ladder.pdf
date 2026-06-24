@@ -1,0 +1,79 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 2200 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+72 720 Td
+(Capability Tier Ladder - board one-pager) Tj T*
+() Tj T*
+(How autonomous is the agent, and what risk does that carry? Five rungs, mapped to EU AI) Tj T*
+(Act risk) Tj T*
+(classes. This is the shared vocabulary for any agent go/no-go decision.) Tj T*
+() Tj T*
+(The ladder) Tj T*
+() Tj T*
+(| Tier | Name | Criteria | EU AI Act risk class |) Tj T*
+(|------|------|----------|----------------------|) Tj T*
+(| L0 | Suggest-only | Drafts and suggestions; a human takes every consequential action. |) Tj T*
+(minimal |) Tj T*
+(| L1 | Act-with-approval | Agent proposes actions; a human approves each before execution.) Tj T*
+(| limited |) Tj T*
+(| L2 | Act-with-guardrails | Agent acts inside hard, pre-execution policy limits; humans) Tj T*
+(review after the fact. | limited |) Tj T*
+(| L3 | Act-autonomously | Agent acts unattended within a bounded domain; HITL only on) Tj T*
+(flagged exceptions. | high-risk |) Tj T*
+(| L4 | Self-directed | Agent sets and revises its own goals across domains without scoped) Tj T*
+(human oversight. | prohibited |) Tj T*
+() Tj T*
+(How to read it) Tj T*
+() Tj T*
+(- The risk class is the FLOOR, not the ceiling. A low-autonomy agent in a sensitive domain) Tj T*
+(\(hiring,) Tj T*
+(credit, health, essential services\) is high-risk regardless of tier.) Tj T*
+(- Promote a tier only after the evals hold at the current tier, the controls for the new) Tj T*
+(tier exist,) Tj T*
+(and the risk register is re-rated.) Tj T*
+(- L4 is prohibited in this handbook's stance: redesign the scope so the agent is bounded.) Tj T*
+() Tj T*
+(What each rung demands) Tj T*
+() Tj T*
+(- L0: human review of output; basic logging.) Tj T*
+(- L1: per-action approval gate; approver role + SLA; audit log of approve/reject + reason.) Tj T*
+(- L2: hard pre-execution guardrails \(budget cap, allowlist, scope\); post-hoc review; kill) Tj T*
+(switch.) Tj T*
+(- L3: eval gate held; exception-based human oversight; immutable audit trail; on-call +) Tj T*
+(incident plan.) Tj T*
+() Tj T*
+(This mapping is canonical across the handbook - the template, the diagram, chapter 12, and) Tj T*
+(the README) Tj T*
+(all say the same thing. A drift is a failing test.) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000002437 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2563
+%%EOF

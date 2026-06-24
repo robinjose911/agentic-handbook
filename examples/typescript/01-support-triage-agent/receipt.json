@@ -1,0 +1,40 @@
+{
+  "classificationPassRate": 1,
+  "example": "01-support-triage-agent",
+  "gate": 0.8,
+  "gatePassed": true,
+  "headline": {
+    "casesPassed": "6/6",
+    "classificationPassRate": "100%",
+    "traceEvents": 12
+  },
+  "passed": 6,
+  "routes": [
+    {
+      "id": "t1",
+      "route": "billing"
+    },
+    {
+      "id": "t2",
+      "route": "technical"
+    },
+    {
+      "id": "t3",
+      "route": "account"
+    },
+    {
+      "id": "t4",
+      "route": "billing"
+    },
+    {
+      "id": "t5",
+      "route": "human-review"
+    },
+    {
+      "id": "t6",
+      "route": "account"
+    }
+  ],
+  "total": 6,
+  "traceEvents": 12
+}
