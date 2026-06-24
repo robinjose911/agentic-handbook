@@ -2,7 +2,7 @@
 
 ![agentic-handbook banner](assets/banner.png)
 
-[![CI](https://github.com/OWNER_PLACEHOLDER/agentic-handbook/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
+[![CI](https://github.com/robinjose911/agentic-handbook/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Examples: 5 runnable](https://img.shields.io/badge/Examples-5%20runnable-green.svg)
 ![Provider: mock / offline](https://img.shields.io/badge/Provider-mock%20%2F%20offline-lightgrey.svg)

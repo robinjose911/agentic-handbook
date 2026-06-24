@@ -114,7 +114,7 @@ def _render(cfg: dict, kind: str) -> bytearray:
 
     # Footer derived from config (not hand-typed), so it can't drift from the canonical mnemonic.
     _draw_centered(buf, " ".join(surface_names), 510, 2, SUBTLE)
-    _draw_centered(buf, f"BY {cfg['owner'].upper()}", 575, 2, SUBTLE)
+    _draw_centered(buf, f"GITHUB.COM/{cfg['owner'].upper()}", 575, 2, SUBTLE)
     return buf
 
 
