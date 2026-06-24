@@ -1,0 +1,35 @@
+# --- Agentic Handbook ---
+
+# Planning + local agent build-context (NOT for the public repo)
+/samples/
+CLAUDE.md
+
+# Local agent config
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Node tooling (local preview render + Playwright + runnable examples)
+node_modules/
+tools/preview/dist/
+test-results/
+playwright-report/
+.playwright/
+*.tsbuildinfo
+
+# Python tooling (validators, mock LLM provider, presentation render)
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Build / temp
+*.log
+.tmp/
